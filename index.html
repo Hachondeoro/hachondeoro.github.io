@@ -7,8 +7,8 @@
     <title>Frank's Website</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
-    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -30,33 +30,45 @@
         </nav>
     </header>
     <div id='msg'></div>
-    <div id="my_dataviz"></div> 
-    <div id="div_template"></div>
-    <div id="dataviz_axisZoom"></div>
-    <script src = "js/interactive.js"></script>
+    <!-- <svg id="my_dataviz" width="960" height="500"
+    viewBox="0 0 960 500"
+    preserveAspectRatio="xMidYMid meet">
+    </svg> -->
+    <div id="my_dataviztip"></div>
+    <div id="zawarudo"></div>
+    
+    <!-- <script src = "js/interactive.js"></script> -->
     <!-- <script src = "js/boxplot.js"></script> -->
-    <!-- <script src = "js/america.js"></script> -->
-    <!-- <script src = "js/zawarudo.js"></script>  -->
+    <script src = "js/america.js"></script>
+    <script src = "js/zawarudo.js"></script> 
     <!-- <script src = "js/promises2.js"></script> -->
     
     
     
     <div class = "column">
-        <h2>Start of the section</h2>
-        <p>Testing 1 Testing 1 Testing 1 Testing 1 Testing 1
-            Testing 2 Testing 2 Testing 2 Testing 2 Testing 2
-            No tab No tab No tab No tab No tab No tab</p>
+        <h2>Interesting facts about pokemon</h2>
+        <p>1. The first Pokémon ever was not who you'd expect....it was Rhydon!
+            2. What does "Pokémon" really mean? Pocket Monsters!
+            3. Slowbro Is The Only Pokemon That Can Devolve
+            4. Hitmonchan And Hitmonlee Got Their Names From Famous Fighters
+            5. Meowth And Pikachu Are Opposite Pokemon
+            6. Pikachu Can Talk And Learn Surf In Pokemon Stadium
+            7. Arcanine Was Intended To Be A Legendary Pokemon
+            8. Ditto Is Most Likely A Failed Attempt At Cloning Mew
+            9. Clefairy Was Almost The Face Of Pokemon
+        </p>
+        <img src="img/pokemon.jpg" alt="Pokemon!" width="100%">
     </div>
     
     <div class = "column">
-        <h2>Start of the div!</h2>
+        <h2>Let's play a bit :D!</h2>
             <p>Let's change some background images!</p>
             <p id = 'output'><strong>The date</strong> will appear here</p>
             <!-- Using strong is better -->
             <button type = "button"
             onclick = "displayDate()"> Display date </button>
             <button type = "button" 
-            onclick = "alert('You scared me!')">Click here</button>
+            onclick = "alert('You scared me!')">Don't scare me!</button>
             <button type = "button" 
             onclick = "changetheme('meme')">Checkout a meme!</button>
             <button type = "button" 
@@ -65,9 +77,11 @@
             onclick = "changetheme('himouto')">Checkout Himouto Umaru chan!</button>
             <button type = "button" 
             onclick = "changetheme('mk')">Checkout Mortal Kombat!</button>
+            <button type = "button" 
+            onclick = "javascript:document.body.style.background = '#d46b6b';">Reset the background :(</button>
     </div>
     <div id = 'forms'>
-        <p>Hola</p>
+        <p>A basic questionnaire</p>
         <form>
             <label for='name'>Name</label>
             <input type='text' id='name' name='name'><br/>
@@ -75,7 +89,10 @@
             <label>Preferred Email: <input type='email' id = 'email_rep' name='email2' required onchange='check()' ></label><br/>            <br>Foods you like<br/> 
             <label><input type='checkbox' name='food' value='bread'>Bread</label>
             <label><input type='checkbox' name='food' value='meat'>Meat</label>
-            <label><input type='checkbox' name='food' value='apples'>Apples</label>
+            <label><input type='checkbox' name='food' value='honey'>Honey</label>
+            <label><input type='checkbox' name='food' value='celery'>Celery</label>
+            <label><input type='checkbox' name='food' value='cereal&beer'>Cereal with Beer</label>
+            <label><input type='checkbox' name='food' value='raisins'>Raisins</label>
             <br><br>Gender<br/>
             <label><input type='radio' name='gender' value='male'>Male</label><br/>
             <label><input type='radio' name='gender' value='female'>Female</label><br/>
@@ -85,8 +102,12 @@
             <label>Nickname? <input id='yesnick' name='yesnick' type='checkbox' 
                 value='yes' onchange="setnickname()"></label>
             <div id = 'nick' style="display:none">
-                <label>Is it cool?<input type='checkbox' name='nickname' id='nickname'></label>
+                <label>Is it cool?<input type='checkbox' name='nickname' id='nickname' onchange="trollnickname()"></label>
             </div>
+            <div id = 'troll' style="display:none">
+                <label id='trollname'>Good for you</label>
+            </div>
+            
             <br>
             <input type = 'submit' value = 'Submit form' onclick = 'return check()'> 
             
@@ -97,36 +118,39 @@
     <div id="buttonsplay">
         
         <h2>Let's play with some buttons!</h2>
-            <button onclick = "document.getElementById('stuff').innerHTML = 
-            'You scared me :('">Dont scare me!</button>
-            <button onclick = "document.getElementById('stuff').innerHTML = 
-            'You pressed me :)'">Press me!</button>
+            <button onclick = "imagetroll.src='img/baka.png'
+            document.getElementById('stuff').innerHTML = ''
+            document.getElementById('imagetroll').style.display = 'inline'">Dont scare me!</button>
+            <button onclick = "imagetroll.src='img/wohoo.png'
+            document.getElementById('stuff').innerHTML = ''
+            document.getElementById('imagetroll').style.display = 'inline'">Press me!</button>
             <p id = 'stuff' style="color: teal; font-size: 25px;">
                 See what happens! :D</p>
-            <p style='color:black' id = 'names'>some names</p>
+            <img id = 'imagetroll' src="" alt="Tsuyu <3" width="30%" style="display:none; padding-left: 10%">
+            <p id = 'names'>some names</p>
             <button onclick='addnames()'>Add your name!</button>
             <button onclick='removename()'>Remove last name!</button>
     </div>
     
-    <div id="imagesplay">
+    <div class="imagesplay">
 
         <h2>Show some Image descriptions!</h2>
         <p id = 'message' style="color: teal; font-size: 20px;">Change this text!</p>
-        <img src="img/mk.jpg" alt="Mortal Kombat!" width="200" height="125"
+        <img src="img/mk.jpg" alt="Mortal Kombat!" width="100%"
         onclick = "console.log(this.width, 'The alt is: ' +this.alt)" ,
         onmouseover = "showProperties(this)",
         onmouseleave = "document.getElementById('message').innerHTML = 'Hover an image'">
-        <img src="img/himouto.jpg" alt="Himouto Umaru Chan" width="200" 
+        <img src="img/himouto.jpg" alt="Himouto Umaru Chan" width="100%"
         onmouseover = "showProperties(this)",
         onmouseleave = "document.getElementById('message').innerHTML = 'Hover an image'">
-        <img src="img/tsuyu.jpg" alt="Tsuyu <3" width="200"
+        <img src="img/tsuyu.jpg" alt="Tsuyu <3" width="100%"
         onmouseover = "showProperties(this)",
         onmouseleave = "document.getElementById('message').innerHTML = 'Hover an image'">
         
     </div>        
-    <div id='imagesplaytwo'>
+    <div class='imagesplay'>
         <h2>The opposite from before!</h2>
-        <img id = 'myimage' src="img/tsuyu.jpg" alt="Tsuyu <3" width="400">
+        <img id = 'myimage' src="img/tsuyu.jpg" alt="Tsuyu <3" width="90%">
             <br>
             <button onclick = "myimage.src='img/mk.jpg'">Check out Mortal Kombat!</button>
             <button onclick = "myimage.src='img/himouto.jpg'">Check out himouto!</button>
@@ -144,7 +168,7 @@
         <!-- <iframe src="https://www.google.com/maps/embed?..." width="500" height="300" ></iframe> -->
     </div>
     <!-- <div id="wufoo-zfzdh5z15rt4b4"> Fill out my <a href="https://raviolidecalamardo.wufoo.com/forms/zfzdh5z15rt4b4">online form</a>. </div> <script type="text/javascript"> var zfzdh5z15rt4b4; (function(d, t) { var s = d.createElement(t), options = { 'userName':'raviolidecalamardo', 'formHash':'zfzdh5z15rt4b4', 'autoResize':true, 'height':'935', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { zfzdh5z15rt4b4 = new WufooForm(); zfzdh5z15rt4b4.initialize(options); zfzdh5z15rt4b4.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script> -->
-    
+<div id="div_template"></div>    
 <footer>
     <!-- <a href="http://twitter.com"><i class="fab fa-twitter fa-3x"></i></a> -->
     <!-- <a href="http://linkedin.com"><i class = "fab fa-linkedin fa-3x"></i></a> -->

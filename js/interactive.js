@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 25, bottom: 30, left: 40},
-  width = 975 - margin.left - margin.right,
-  height = 600 - margin.top - margin.bottom;
+  width = 960 - margin.left - margin.right,
+  height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -51,7 +51,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/he
     .domain([1,100])
 
   // create a tooltip
-  var Tooltip = d3.select("#my_dataviz")
+  var Tooltip = d3.select("#my_dataviztip")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")

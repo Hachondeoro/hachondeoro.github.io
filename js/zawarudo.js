@@ -45,7 +45,7 @@ promiseA = d3.csv("data/alphabet.csv")
         return data
     })
     .then(function(data){
-        elpepe = d3.select("body").append("svg")
+        elpepe = d3.select("#div_template").append("svg")
         .attr("viewBox", [0, 0, width, height])
         .call(zoom);
     

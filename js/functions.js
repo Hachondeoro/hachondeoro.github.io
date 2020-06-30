@@ -17,11 +17,11 @@ function displayDate() {
     
 }
 function changetheme(image_name) {
-    // document.body.style.background = "url('../imgs/meme.jpg')"
-    file = 'url(../mywebsite/imgs/'+image_name+'.jpg'
+    // document.body.style.background = "url('../img/meme.jpg')"
+    file = 'url(../img/'+image_name+'.jpg'
     document.body.style.background = file
 }
-// background: url("../imgs/meme.jpg")
+// background: url("../img/meme.jpg")
 // background-color: #0080ff
 
 function displayID(element) {
@@ -32,14 +32,14 @@ function showProperties(element) {
     document.getElementById('message').innerHTML = element.alt;
 }
 
-var names = ['Frank','Eduardo','Pablo']
+var names = ['Frank Espinoza','Eduardo Espinoza','Pablo Espinoza']
 function loadnames() {
     document.getElementById('names').innerHTML = names
 }
 function addnames() {
     var yourname = prompt('What is your name');
     names[names.length]=yourname;
-    document.getElementById('names').innerHTML = names;
+    document.getElementById('names').innerHTML = names+" Espinoza";
 }
 
 function removename() {
@@ -56,6 +56,17 @@ function setnickname() {
     } else {
         document.getElementById('nickname').removeAttribute('required');
         document.getElementById('nick').style.display='none';
+    }
+    
+}
+
+function trollnickname() {
+    if (document.getElementById('nickname').checked) {
+        document.getElementById('troll').style.display = 'inline';
+        document.getElementById('troll').setAttribute('required', true);        
+    } else {
+        document.getElementById('troll').removeAttribute('required');
+        document.getElementById('troll').style.display='none';
     }
     
 }

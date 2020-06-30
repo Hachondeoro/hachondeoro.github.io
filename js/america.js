@@ -1,8 +1,6 @@
-<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
-
 path = d3.geoPath()
 us = d3.json("data/states-albers-10m.json")
-.then(function(us){
+.then(function(us){ 
     const width = 975;
     const height = 610;
     const zoom = d3.zoom()
@@ -10,7 +8,7 @@ us = d3.json("data/states-albers-10m.json")
         .on("zoom", zoomed);
 
     
-    const svg = d3.select("body").append("svg")
+    const svg = d3.select("#zawarudo").append("svg")
         .attr("viewBox", [0, 0, width, height])
         .on("click", reset);
 
