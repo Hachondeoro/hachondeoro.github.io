@@ -3,9 +3,9 @@ us = d3.json("data/states-albers-10m.json")
 .then(function(us){ 
     const width = 975;
     const height = 610;
-    const zoom = d3.zoom()
-        .scaleExtent([1, 8])
-        .on("zoom", zoomed);
+    // const zoom = d3.zoom()
+    //     .scaleExtent([1, 8])
+    //     .on("zoom", zoomed);
 
     
     const svg = d3.select("#zawarudo").append("svg")
