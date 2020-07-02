@@ -23,8 +23,8 @@ promiseA = d3.csv("data/alphabet.csv")
     .then(function(data) {
 
         margin = ({top: 20, right: 0, bottom: 30, left: 40}) 
-        height = 400
-        width = 500
+        height = 200
+        width = 600
         yAxis = g => g
             .attr("transform", `translate(${margin.left},0)`)
             .call(d3.axisLeft(y))
@@ -45,7 +45,7 @@ promiseA = d3.csv("data/alphabet.csv")
         return data
     })
     .then(function(data){
-        elpepe = d3.select("#div_template").append("svg")
+        elpepe = d3.select("#histogram").append("svg")
         .attr("viewBox", [0, 0, width, height])
         // .call(zoom);
     

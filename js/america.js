@@ -1,14 +1,14 @@
 path = d3.geoPath()
 us = d3.json("data/states-albers-10m.json")
 .then(function(us){ 
-    const width = 975;
-    const height = 610;
-    // const zoom = d3.zoom()
-    //     .scaleExtent([1, 8])
-    //     .on("zoom", zoomed);
+    const width = 2000;
+    const height = 310;
+    const zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .on("zoom", zoomed);
 
     
-    const svg = d3.select("#zawarudo").append("svg")
+    const svg = d3.select("#america").append("svg")
         .attr("viewBox", [0, 0, width, height])
         .on("click", reset);
 
@@ -31,7 +31,7 @@ us = d3.json("data/states-albers-10m.json")
         .attr("stroke-linejoin", "round")
         .attr("d", path(topojson.mesh(us, us.objects.states, (a, b) => a !== b)));
 
-    svg.call(zoom);
+    // svg.call(zoom);
 
     function reset() {
         svg.transition().duration(750).call(
