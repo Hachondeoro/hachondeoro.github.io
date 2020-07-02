@@ -51,7 +51,7 @@ promiseA = d3.csv("data/alphabet.csv")
     
         elpepe.append("g")
         .attr("class", "bars")
-        .attr("fill", "white")
+        .attr("fill", "crimson")
         .selectAll("rect")
         .data(data)
         .join("rect")
