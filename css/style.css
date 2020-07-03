@@ -14,8 +14,8 @@ body {
 }
 
 @font-face{
-    font-family: Simpletune;
-    src: url('../fonts/simpletune.ttf')
+    font-family: Mark;
+    src: url('../fonts/mark.ttf')
 }
 
 header{
@@ -173,7 +173,7 @@ p {
 #names{
     color: white;
     font-size: 1.2em;
-    font-family: Simpletune;
+    font-family: Mark;
 }
 
 /* table {
