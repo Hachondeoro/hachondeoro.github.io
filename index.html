@@ -16,7 +16,7 @@
  
     <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src = "js/functions.js"></script>   
+    <script src = "js/functions.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -24,30 +24,32 @@
     <link rel="icon" type="image/png" href="img/bitcoin.ico">
       
 </head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+                <img src="img/bitcoin.ico" style = "width: 3em;" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <a class="nav-link nav-item" href="http://google.com">Google website</a>
+            <a class="nav-link nav-item" href="http://coinmarketcap.com" class="current">Coinmarketcap</a>
+            <a class="nav-link nav-item" href="http://coinmetrics.io">Coinmetrics</a>
+            <a class="nav-link nav-item dropdown-toggle" href="pages/about.html">About</a>
+            <a class="nav-link nav-item" href="pages/tohru.html" target="blank">Tohru</a>
+            <a class="nav-link nav-item" href="pages/calcu.html" target="blank">My Calculator</a>
+            <a class="nav-link nav-item" href="mailto:frank1392@gmail.com?subject=You're so awesome!">Contact me!</a>
+    
+          </div>
+        </div>
+      </nav>
+      <h1>Frank's Website</h1>
+</header>
+
 
 <body class="page-wrapper" onload='loadnames()'>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                    <img src="img/bitcoin.ico" style = "width: 3em;" alt="">
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <a class="nav-link nav-item" href="http://google.com">Google website</a>
-                <a class="nav-link nav-item" href="http://coinmarketcap.com" class="current">Coinmarketcap</a>
-                <a class="nav-link nav-item" href="http://coinmetrics.io">Coinmetrics</a>
-                <a class="nav-link nav-item dropdown-toggle" href="pages/about.html">About</a>
-                <a class="nav-link nav-item" href="pages/tohru.html" target="blank">Hi</a>
-                <a class="nav-link nav-item" href="mailto:frank1392@gmail.com?subject=You're so awesome!">Contact me!</a>
-        
-              </div>
-            </div>
-          </nav>
-          <h1>Frank's Website</h1>
-    </header>
 
     <!-- Navigation -->
 
@@ -106,12 +108,46 @@
         <img src='img/pikachu.jpg' class='col-6 col-md-4'>
         <img src='img/pikachu.jpg' class='col-6 col-md-4'>
         <img src='img/pikachu.jpg' class='col-6 col-md-4'>
-        
     </div>
+    <div id="demo" class="carousel slide col-8" data-ride="carousel"> 
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner  mx-auto text-center" >
+          <div class="carousel-item active">
+            <img src="img/bulbasaur.png" alt="Los Angeles" class = "col-md-6">
+          </div>
+          <div class="carousel-item">
+            <img src="img/charmander.jpg" alt="Chicago"  class = "col-md-6">
+          </div>
+          <div class="carousel-item">
+            <img src="img/squirtle.png" alt="New York"  class = "col-md-6">
+          </div>
+          <div class="carousel-caption">
+            <h3 style = "color:black">My favourite pokemon</h3>
+            <p>The three starters!</p>  
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
     <div class = 'forms d-none d-md-block'> 
         <p>A basic questionnaire</p>
         <form> 
-            <label for='name'>Name</label>
+            <label for='name' >Name</label>
             <input type='text' id='name' name='name'><br/>
             <label>Email: <input type='email' id = 'email_addr' name='email1' value='me@me.com' required></label><br/>
             <label>Preferred Email: <input type='email' id = 'email_rep' name='email2' required onchange='check()' ></label><br/>            <br>Foods you like<br/> 
@@ -196,7 +232,6 @@
     
         <!-- <iframe src="https://www.google.com/maps/embed?..." width="500" height="300" ></iframe> -->
     </div>
-    <!-- <div id="wufoo-zfzdh5z15rt4b4"> Fill out my <a href="https://raviolidecalamardo.wufoo.com/forms/zfzdh5z15rt4b4">online form</a>. </div> <script type="text/javascript"> var zfzdh5z15rt4b4; (function(d, t) { var s = d.createElement(t), options = { 'userName':'raviolidecalamardo', 'formHash':'zfzdh5z15rt4b4', 'autoResize':true, 'height':'935', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { zfzdh5z15rt4b4 = new WufooForm(); zfzdh5z15rt4b4.initialize(options); zfzdh5z15rt4b4.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script> -->
 <div id="histogram"></div>    
 <footer>
     <!-- <a href="http://twitter.com"><i class="fab fa-twitter fa-3x"></i></a> -->

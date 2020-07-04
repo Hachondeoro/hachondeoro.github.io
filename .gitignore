@@ -2,3 +2,4 @@
 .vscode/launch.json
 desktop.ini
 *.ini
+node_modules

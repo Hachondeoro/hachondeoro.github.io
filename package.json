@@ -1,0 +1,22 @@
+{
+  "name": "visual-studio",
+  "version": "1.0.0",
+  "description": "this is a test directory to learn git and node",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hachondeoro/hachondeoro.github.io.git"
+  },
+  "author": "frank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hachondeoro/hachondeoro.github.io/issues"
+  },
+  "homepage": "https://github.com/Hachondeoro/hachondeoro.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

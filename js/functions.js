@@ -14,7 +14,6 @@ function welcomeMsg(msg) {
 
 function displayDate() {
     document.getElementById('output').innerHTML = Date();
-    
 }
 function changetheme(image_name) {
     // document.body.style.background = "url('../img/meme.jpg')"
@@ -36,18 +35,7 @@ var names = ['Frank Espinoza','Eduardo Espinoza','Pablo Espinoza']
 function loadnames() {
     document.getElementById('names').innerHTML = names
 }
-function addnames() {
-    var yourname = prompt('What is your name');
-    names[names.length]=yourname;
-    document.getElementById('names').innerHTML = names+" Espinoza";
-}
 
-function removename() {
-    names = names.slice(0, -1);
-    // names[names.length-1]=null;
-    document.getElementById('names').innerHTML = names;
-    
-}
 
 function setnickname() {
     if (document.getElementById('yesnick').checked) {
@@ -103,5 +91,15 @@ if (grades.length > 0) {
     // console.log('Empty array')
 }
 
+function addnames() {
+    var yourname = prompt('What is your name');
+    names[names.length]=yourname;
+    document.getElementById('names').innerHTML = names+" Espinoza";
+}
 
-
+function removename() {
+    names = names.slice(0, -1);
+    // names[names.length-1]=null;
+    document.getElementById('names').innerHTML = names;
+    
+}
