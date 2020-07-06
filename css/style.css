@@ -1,7 +1,7 @@
 @media screen and (min-width:100px){
 
 body {
-    background-color: #d46b6b;
+    /* background-color: #d46b6b; */
     /* background: url("../imgs/mk.jpg");   */
     /* background-repeat: no-repeat; */
     /* background-size: auto 40%; */
@@ -22,12 +22,20 @@ header{
     background-color:white;
     padding-bottom: 1em;
 }
-footer a{ 
+@mixin zero-margin{
+    margin: 0px auto;
+}
+
+footer {
     background: rgb(61, 61, 61);
+}
+footer a{ 
+    background: silver;
     font-family: Avenir;
     /* color: white; */
     clear:both;
 }
+
 button{
     display: block;
     font-family: Avenir;
@@ -159,8 +167,13 @@ p {
         display: inline-block;
         vertical-align: top;
         margin-left: 3em;
-    }
+    } 
     
+    .australiamaps-column{
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 
@@ -217,3 +230,21 @@ tr:hover {background-color: steelblue;}
     background-color: rgb(33, 136, 50);
 }
  */
+#maps {
+  width: 510px;
+  height: 500px;
+  border: 0px solid #eee;
+  margin: 0px auto;
+  position: relative;
+}
+
+.mapdiv {
+  width: 1000px; 
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#mapid { height: 400px; }
+

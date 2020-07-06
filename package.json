@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Hachondeoro/hachondeoro.github.io#readme",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    
+  },
+  "dependencies": {
+    
   }
 }
