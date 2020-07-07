@@ -1,0 +1,47 @@
+@media screen and (min-width:100px){
+@font-face{
+    font-family: Avenir;
+    src: url('../fonts/Avenir-Book.ttf')
+}
+h1 {
+    color: rgb(131, 1, 1);
+    font-family: Avenir;
+    font-variant: small-caps;
+    font-size:2em;
+    text-align: center;
+    margin:0 auto;
+}
+
+p {
+    color: black;
+    font-family: Avenir;
+    font-size:1em;
+    margin-left: 5%;
+    white-space: pre-line;
+}
+
+h2 {
+    color: white;
+    /* display: inline-block; */
+    width:100%;
+    margin-left: 0%;
+    padding-left: 5%;
+    font-family: Avenir;
+    background-color: rgb(129, 48, 48);
+    font-size: 100%;
+    border-width: 2px 5px 5px;
+    box-sizing: border-box;
+    /* margin: 40px;  */
+}
+
+
+.content img {
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.content p{ 
+    display: inline-block; 
+}
+
+}

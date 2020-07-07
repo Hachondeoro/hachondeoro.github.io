@@ -22,9 +22,6 @@ header{
     background-color:white;
     padding-bottom: 1em;
 }
-@mixin zero-margin{
-    margin: 0px auto;
-}
 
 footer {
     background: rgb(61, 61, 61);
