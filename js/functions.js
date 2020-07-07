@@ -31,11 +31,6 @@ function showProperties(element) {
     document.getElementById('message').innerHTML = element.alt;
 }
 
-var names = ['Frank Espinoza','Eduardo Espinoza','Pablo Espinoza']
-function loadnames() {
-    document.getElementById('names').innerHTML = names
-}
-
 
 function setnickname() {
     if (document.getElementById('yesnick').checked) {

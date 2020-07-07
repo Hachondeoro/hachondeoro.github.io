@@ -37,9 +37,9 @@
             <a class="nav-link nav-item" href="pages/australia.html">Australia</a>
             <a class="nav-link nav-item" href="pages/anime.html">Anime</a>
             <a class="nav-link nav-item" href="pages/stickers.html">Whatsapp Stickers</a>
-            <a class="nav-link nav-item dropdown-toggle" href="pages/about.html">About</a>
-            <a class="nav-link nav-item" href="pages/tohru.html" target="blank">Tohru</a>
-            <a class="nav-link nav-item" href="pages/calcu.html" target="blank">My Calculator</a>
+            <a class="nav-link nav-item" href="pages/about.html">About</a>
+            <a class="nav-link nav-item" href="pages/tohru.html">Tohru</a>
+            <a class="nav-link nav-item" href="pages/calcu.html">My Calculator</a>
             <a class="nav-link nav-item" href="mailto:frank1392@gmail.com?subject=You're so awesome!">Contact me!</a>
     
           </div>
@@ -49,24 +49,10 @@
 </header>
 
 
-<body class="page-wrapper" onload='loadnames()'>
+<body class="page-wrapper">
 
-    <!-- Navigation -->
-
-    
     <div id='msg'></div>
-    <!-- <svg id="my_dataviz" width="960" height="500"
-    viewBox="0 0 960 500"
-    preserveAspectRatio="xMidYMid meet">
-    </svg> -->
-    <!-- <div id="my_dataviztip"></div> -->
-        
-    <!-- <script src = "js/interactive.js"></script> -->
-    <!-- <script src = "js/boxplot.js"></script> -->
     <script src = "js/histogram.js"></script> 
-    <!-- <script src = "js/promises2.js"></script> -->
-    
-     
     <div class = "column col-md-5">
         <h2>Interesting facts about pokemon</h2>
         <p> 1. The first Pokémon ever was not who you'd expect....it was Rhydon!
@@ -104,9 +90,9 @@
             onclick = "javascript:document.body.style.background = '#ffffff';">Reset the background :(</button>
     </div>
     <div id='row'>
-        <img src='img/pikachu.jpg' class='col-6 col-md-4'>
-        <img src='img/pikachu.jpg' class='col-6 col-md-4'>
-        <img src='img/pikachu.jpg' class='col-6 col-md-4'>
+        <img src='img/pikachu.jpg' class='col-4 col-md-3'>
+        <img src='img/pikachu.jpg' class='col-4 col-md-3'>
+        <img src='img/pikachu.jpg' class='col-4 col-md-3'>
     </div>
     <div id="demo" class="carousel slide col-8" data-ride="carousel"> 
 
@@ -143,20 +129,27 @@
         </a>
       
       </div>
-    <div class = 'forms d-none d-md-block'> 
-        <p>A basic questionnaire</p>
+    <div class = 'forms'> 
+        <br><br> 
+        <h2>A basic questionnaire</h2>
+        <div id = 'myform'>
         <form> 
             <label for='name' >Name</label>
             <input type='text' id='name' name='name'><br/>
             <label>Email: <input type='email' id = 'email_addr' name='email1' value='me@me.com' required></label><br/>
-            <label>Preferred Email: <input type='email' id = 'email_rep' name='email2' required onchange='check()' ></label><br/>            <br>Foods you like<br/> 
+            <label>Preferred Email: <input type='email' id = 'email_rep' name='email2' required onchange='check()' ></label><br/>            
+            <br>
+            <b>Foods you like</b>
+            <br>
             <label><input type='checkbox' name='food' value='bread'>Bread</label>
             <label><input type='checkbox' name='food' value='meat'>Meat</label>
             <label><input type='checkbox' name='food' value='honey'>Honey</label>
             <label><input type='checkbox' name='food' value='celery'>Celery</label>
             <label><input type='checkbox' name='food' value='cereal&beer'>Cereal with Beer</label>
             <label><input type='checkbox' name='food' value='raisins'>Raisins</label>
-            <br><br>Gender<br/>
+            <br><br>
+            <b>Gender</b>
+            <br>
             <label><input type='radio' name='gender' value='male'>Male</label><br/>
             <label><input type='radio' name='gender' value='female'>Female</label><br/>
             <label>ZIP<input type='text' name='zip_code' pattern='[0-9]{4}' required></label>
@@ -175,11 +168,12 @@
             <input type = 'submit' value = 'Submit form' onclick = 'return check()'> 
             
         </form>
+        </div>
     </div>
     
 
     <div id="buttonsplay">
-        
+        <br><br><br>
         <h2>Let's play with some buttons!</h2>
             <button onclick = "imagetroll.src='img/baka.png'
             document.getElementById('stuff').innerHTML = ''
@@ -187,16 +181,12 @@
             <button onclick = "imagetroll.src='img/wohoo.png'
             document.getElementById('stuff').innerHTML = ''
             document.getElementById('imagetroll').style.display = 'inline'">Press me!</button>
-            <p id = 'stuff' style="color: teal; font-size: 1.5em;">
+            <p id = 'stuff' style="color: teal; font-size: 1em;">
                 See what happens! :D</p>
             <img id = 'imagetroll' src="" class ="col-10 col-md-4" style="display:none; padding-left: 10%">
-
-            <p id = 'names' style="color:black; font-size:2em">Frank Espinoza</p>
-            <button onclick='addnames()'>Add your name!</button>
-            <button onclick='removename()'>Remove last name!</button>
     </div>
     
-    <div class="imagesplay">
+    <div class="imagesplay col-md-5">
 
         <h2>Show some Image descriptions!</h2>
         <p id = 'message' style="color: teal; font-size: 20px;">Change this text!</p>
@@ -212,7 +202,7 @@
         onmouseleave = "document.getElementById('message').innerHTML = 'Hover an image'">
         
     </div>        
-    <div class='imagesplay'>
+    <div class='imagesplay col-md-5'>
         <h2>The opposite from before!</h2>
         <img id = 'myimage' src="img/tsuyu.jpg" alt="Tsuyu <3" width="90%">
             <br>
@@ -221,6 +211,7 @@
             <button onclick = "myimage.src='img/tohru.jpg'">Check out tohru!</button>
     </div>
     <div id="moreelements">
+      <br><br><br>
         <h2>And more elements</h2>
         <table class="table table-hover">
             <tr><th>Names</th><th>Surnames</th></tr>
@@ -233,12 +224,8 @@
     </div>
 <div id="histogram"></div>    
 <footer>
-    <!-- <a href="http://twitter.com"><i class="fab fa-twitter fa-3x"></i></a> -->
-    <!-- <a href="http://linkedin.com"><i class = "fab fa-linkedin fa-3x"></i></a> -->
-    
     <a href="#buttonsplay"></br>Continue playing with some buttons<br></a>
-    <a href="#top">Back to top instead<br></a>
-    &copy;The end of my website 
+    <a href="#top">Back to top instead<br></a> 
 </footer>
 </body>
 
