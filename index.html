@@ -24,33 +24,22 @@
     <link rel="icon" type="image/png" href="img/bitcoin.ico">
       
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-                <img src="img/bitcoin.ico" style = "width: 3em;" alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <a class="nav-link nav-item" href="pages/australia.html">Australia</a>
-            <a class="nav-link nav-item" href="pages/anime.html">Anime</a>
-            <a class="nav-link nav-item" href="pages/stickers.html">Whatsapp Stickers</a>
-            <a class="nav-link nav-item" href="pages/about.html">About</a>
-            <a class="nav-link nav-item" href="pages/tohru.html">Tohru</a>
-            <a class="nav-link nav-item" href="pages/calcu.html">My Calculator</a>
-            <a class="nav-link nav-item" href="mailto:frank1392@gmail.com?subject=You're so awesome!">Contact me!</a>
+
+
+
+<body class="page-wrapper"> 
+    <header>
+      <div id="nav-placeholder"></div>
     
-          </div>
-        </div>
-      </nav>
-      <h1>Frank's Website</h1>
-</header>
+      <script>
+      $(function(){
+        $("#nav-placeholder").load("pages/nav.html");
+      });
+      </script>
+    </header> 
 
 
-<body class="page-wrapper">
-
+  <h1>Frank's Website</h1>
     <div id='msg'></div>
     <script src = "js/histogram.js"></script> 
     <div class = "column col-md-5">
